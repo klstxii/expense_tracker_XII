@@ -5,6 +5,10 @@
      background-color: #fdffe8;
      color: #272522;
 }
+
+body {
+     background-color: transparent;
+}
 h1{
      text-align: center;
      margin-bottom: 20px;
@@ -22,6 +26,7 @@ label{
      display: block;
      margin-bottom: 5px;
      padding-left: 0.75em;
+     background-color: transparent;
 }
 input{
      padding: 1em;
@@ -59,13 +64,23 @@ button:active{
 table{
      display: none;
      width: 100%;
-     border-collapse: border;
+     border-collapse: collapse;
      border: none;
+     background-color: transparent;
 }
 th, td{
      padding: 5px;
      text-align: left;
+     border: none;
+     background-color: transparent;
 }
+tr{
+     background-color: transparent;
+}
+
+.transparent-cell {
+     background-color: transparent;
+ }
 
 @media screen and (max-width: 750px) {
      #form-wrapper{
@@ -79,3 +94,35 @@ th, td{
           font-size: 1.5em;
      }
 }
+
+.moving-shape {
+     width: auto; 
+     aspect-ratio:1;
+     background-color: rgba(128, 128, 128, 0.7); 
+     opacity: 0.4;
+     position: absolute;
+     top: -500px;
+     z-index: -1;
+     animation: rotate-fall 5s linear; 
+      animation-iteration-count: 6;
+     border: none;
+     outline: none;
+     border-radius: 0;
+     box-shadow: none;
+ }
+ 
+ 
+ @keyframes rotate-fall {
+     0% {
+         transform: translateY(0) rotate(0deg);
+         border-radius: 0;
+     }
+     50% {
+         transform: translateY(500px)rotate(900deg);
+         border-radius: 50%;
+     }
+     100% {
+         transform: translateY(calc(1000px)) rotate(1800deg);
+         border-radius: 0; 
+     }
+ }

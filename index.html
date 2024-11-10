@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div id="form-wrapper">
-        <h1>Expense Tracker</h1>
-        <form id="addExpenseForm">
+    <div id="form-wrapper" style="padding: 20px; background-color: transparent;">
+        <h1 style="padding: 20px; background-color: transparent;">Expense Tracker</h1>
+        <form id="addExpenseForm" style="padding: 20px; background-color: transparent;">
             <label for="expenseName">Expense Name</label>
             <input type="text" id="expenseName" name="expenseName" placeholder="Enter expense name">
             <label for="expenseAmount">Expense Amount</label>
             <input type="number" id="expenseAmount" step="0.01" name="expenseAmount" placeholder="Enter expense amount in PHP">
             <label for="expenseDate">Expense Date</label>
             <input type="date" id="expenseDate" name="expenseDate">
-            <div id="submit-wrapper">
-                <span>Total Expense: PHP <b><a id="totalExpense">0</a></b></span>
+            <div id="submit-wrapper" style="padding: 20px; background-color: transparent;" >
+                <span style="padding: 20px; background-color: transparent;">
+                    Total Expense: PHP <b style="padding: 20px; background-color: transparent;">
+                        <a id="totalExpense" style="padding: 20px; background-color: transparent;">0</a>
+                    </b>
+                </span>
                 <button type="submit" class="submit">Add Expense</button>
             </div>
         </form>
         <table id="expenseTable">
-            <thead>
+            <thead style="background-color: transparent;">
                 <tr>
-                    <th>Name</th>
-                    <th>Amount</th>
-                    <th>Date</th>
-                    <th></th>
+                    <th class="transparent-cell">Name</th>
+                    <th class="transparent-cell">Amount</th>
+                    <th class="transparent-cell">Date</th>
+                    <th class="transparent-cell"></th>
                 </tr>
             </thead>
         </table>
